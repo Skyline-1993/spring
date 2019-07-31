@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--调用无参构造创建对象-->
+    <bean name="stu1" class="com.skyline.entity.Student" scope="singleton">
+
+    </bean>
+
+    <!--
+        xml会把所有的< >解析为标签，如果不需要解析，可以使用CDATA
+        <![CDATA[要转义的内容]]>
+        如： <![CDATA[<张三>]]>  出来后就是<张三>
+    -->
+    <bean id="stu2" class="com.skyline.entity.Student">
+        <property name="id" value="001"></property>  <!--property属性是使用setter方法赋值,使用无参构造方法来创建对象-->
+        <property name="name">
+            <value><![CDATA[<张三>]]></value>
+        </property>
+        <property name="age" value="23"></property>
+
+        <!--如果属性是其他对象，使用ref来关联-->
+        <!--这种通过ref将某个bean对象赋值给另外一个对象的某个属性时，叫依赖注入(DI)-->
+        <property name="classes" ref="classes"></property>
+    </bean>
+
+    <bean id="stu3" class="com.skyline.entity.Student">
+        <constructor-arg name="id" value="002"></constructor-arg>  <!--constructor-arg属性是使用构造方法赋值,使用有参构造方法来创建对象-->
+        <constructor-arg name="name" value="李四"></constructor-arg>
+        <constructor-arg name="age" value="25"></constructor-arg>
+    </bean>
+
+    <bean id="stu3_1" class="com.skyline.entity.Student">
+        <constructor-arg index="0" value="0022"></constructor-arg>  <!--constructor-arg属性是使用构造方法赋值,使用有参构造方法来创建对象-->
+        <constructor-arg index="1" value="李四2"></constructor-arg>
+        <constructor-arg index="2" value="252"></constructor-arg>
+    </bean>
+
+    <bean id="classes" class="com.skyline.entity.Classes">
+        <property name="name" value="一班"></property>
+        <property name="id" value="1"></property>
+        <property name="students">
+            <list>
+                <ref bean="stu1"></ref>
+                <ref bean="stu3"></ref>
+            </list>
+        </property>
+    </bean>
+
+</beans>
