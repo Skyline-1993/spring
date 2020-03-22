@@ -3,18 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="userController" class="com.skyline.controller.UserController" autowire="byType">
+    <!--autowire 自动装载必需手动开启
+        开启后才会自动给bean中的输入注入值
+        并且，xml配置bean的方式自动注入使用setter方法注入，故bean中需要注入值的属性必需有setter方法
+    -->
+    <bean id="userController" class="com.skyline.spring4.controller.UserController" autowire="byType"></bean>
 
-    </bean>
-
-    <!--autowire 自动装载必需手动开启-->
-    <bean id="userService" class="com.skyline.service.impl.UserServiceImpl" autowire="byType">
-
-    </bean>
-
-    <bean id="userDao" class="com.skyline.dao.impl.UserDaoImpl">
-
-    </bean>
-
+    <bean id="userService" class="com.skyline.spring4.service.impl.UserServiceImpl" autowire="byType"></bean>
 
 </beans>

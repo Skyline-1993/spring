@@ -1,14 +1,12 @@
 package com.skyline.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * @author zhangkepeng
  * @date 2019/7/27
  */
-@Getter
-@Setter
+@Data
 public class User {
 
     private int id;
@@ -23,11 +21,4 @@ public class User {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }

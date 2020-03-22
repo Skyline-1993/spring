@@ -1,4 +1,4 @@
-package com.skyline.service;
+package com.skyline.spring5.service;
 
 import com.skyline.entity.User;
 

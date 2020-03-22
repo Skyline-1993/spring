@@ -1,7 +1,6 @@
-package com.skyline.controller;
+package com.skyline.spring4.controller;
 
-import com.skyline.entity.User;
-import com.skyline.service.UserService;
+import com.skyline.spring4.service.UserService;
 
 /**
  * @author zhangkepeng
@@ -11,9 +10,7 @@ public class UserController {
 
     private UserService userService;
 
-    public UserService getUserService() {
-        return userService;
-    }
+
 
     public void setUserService(UserService userService) {
         this.userService = userService;
@@ -26,8 +23,4 @@ public class UserController {
                 '}';
     }
 
-    public User getUser(int id) {
-        User user = userService.getUser(id);
-        return user;
-    }
 }
