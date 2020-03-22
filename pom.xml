@@ -13,9 +13,8 @@
         <module>spring-2</module>
         <module>spring-3</module>
         <module>spring-4</module>
-        <module>spring-6</module>
-        <module>spring-4</module>
         <module>spring-5</module>
+        <module>spring-6</module>
         <module>common</module>
     </modules>
 
@@ -37,17 +36,5 @@
             <version>1.16.14</version>
         </dependency>
     </dependencies>
-
-            <artifactId>spring-context</artifactId>
-            <version>5.1.8.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>5.1.8.RELEASE</version>
-        </dependency>
-
-    </dependencies>
-
 
 </project>

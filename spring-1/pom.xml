@@ -11,5 +11,13 @@
 
     <artifactId>spring-1</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.skyline</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
