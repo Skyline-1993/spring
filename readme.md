@@ -11,13 +11,25 @@ spring的两大核心机制是IOC（控制反转）和AOP（切面编程）。
 
 ## 2、控制反转IOC
 
-通过xml配置方式创建bean
+### 2.1 通过xml配置方式创建bean
+
+创建bean对象时属性值是由setter方法赋值。
 
 https://github.com/Skyline-1993/spring/tree/master/spring-1
 
-## 1、spring注解中的注入通过反射来注入，但是xml配置的bean通过setter方法注入。
+### 2.2 ***
 
-## 2、手动获取spring容器中的bean
+### 2.3 自动装载
+
+### 2.4 注解式bean
+
+### 2.5 通过注解方式创建bean
+
+创建bean对象时属性值是通过反射赋值。
+
+https://github.com/Skyline-1993/spring/tree/master/spring-5
+
+## 3、手动获取spring容器中的bean
 spring容器中的bean可以通过applicationContext.getBean("idName")来获取。
 applicationContext获取的几种方式：
 

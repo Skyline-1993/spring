@@ -14,4 +14,9 @@ public class Student {
         System.out.println("执行空构造");
     }
 
+    public Student(int id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
 }
