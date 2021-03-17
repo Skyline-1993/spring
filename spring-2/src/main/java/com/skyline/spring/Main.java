@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext("com.skyline");
-        Person testController = (Person) applicationContext.getBean("wo");
+        Person testController = (Person) applicationContext.getBean("person");
         System.out.println(testController);
 
     }
